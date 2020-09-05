@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="col-md-6">
+        <h1>Welcome, {{userName}}</h1>
+    </div>
+    <div class="col-md-6">
+        <button class="btn-info " routerLink="/createrequest">Create Request</button>
+    </div>
+    <div> </div>
+    <table class="table table-condensed" *ngIf="requestList!=null">
+        <thead>
+            <tr>
+                <th>Request Id</th>
+                <th>From</th>
+                <th>To</th>
+                <th>Request Date</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let request of requestList; let i = index">
+                <td>{{request.ID}}</td>
+                <td>{{request.UFROM}}</td>
+                <td>{{request.UTO}}</td>
+                <td>{{request.REQDATE}}</td>
+                <td>
+                    <div *ngIf="request.STATUS==1" class="badge"> OPEN</div>
+                    <div *ngIf="request.STATUS==2" class="badge">Close</div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="alert alert-warning" *ngIf="requestList==null">
+        <strong>Warning!</strong> No data found.
+    </div>
+
+</div>

@@ -1,0 +1,114 @@
+<div class="container-fluid ">
+
+    <div class="nav  row  justify-content-between align-items-center">
+        <!-- style="height: 13.5vh; width: 100vw; background-color: rgba(95, 86, 233, 0.863);">-->
+        <!--<div class="nav1 col-6 col-md-12 d-flex flex-column justify-content-center align-items-center">-->
+        <!-- style=" font-weight:bold; color:white;font-size: 1.8em; padding: 2px;"-->
+        <div class="nav1 col-1 col-md-5 d-flex justify-content-start flex-column">AB Movers & Packers</div>
+        <div class=" nav2 col-5 col-md-7 d-flex justify-content-center flex-column">
+            <div class="row justify-content-between ">
+                <div class="col d-flex flex-column">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            CITY
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Mumbai</a>
+                            <a class="dropdown-item" href="#">Pune</a>
+                            <a class="dropdown-item" href="#">Kolhapur</a>
+                            <a class="dropdown-item" href="#">Nashik</a>
+                            <a class="dropdown-item" href="#">Nagpur</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col d-flex flex-column">SERVICES</div>
+                <div class="col d-flex flex-column">ABOUT US</div>
+                <div class="col d-flex flex-column"><a routerLink="/signup">REGISTATION</a></div>
+                <div class="col d-flex flex-column"><a routerLink="/login"> LOGIN</a></div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class=" logbox row justify-content-center align-items-center"
+    style="background: url(assets/home.jpg);background-repeat: no-repeat; background-position: center; background-size: cover; ">
+    <!-- style="height: 86.5vh;background: rgb(243, 234, 234);"-->
+
+
+    <div class="start col-12 col-md-4 d-flex flex-column justify-content-between align-items-center "
+        [formGroup]="myfbGroup" style="height: 80vh;background-color: white;">
+
+        <div class="start1 row d-flex ">
+            <!--style="font-weight: bold;font-size: 1.5em;padding: 4px;"-->Start your Moving
+            from
+            here</div>
+
+        <div class="row d-flex mt-2"><svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-person-fill"
+                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                    d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+            </svg>
+            <input type="text" placeholder=" NAME*" formControlName="username">
+            <label style="color:red" *ngIf="
+                myfbGroup.get('username').invalid &&
+                myfbGroup.get('username').touched ">*Required</label>
+        </div>
+
+        <div class="row">
+            <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-phone-fill" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                    d="M3 2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V2zm6 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+            </svg>
+            <input type="number" placeholder="MOBILE*" formControlName="usermobile">
+            <label style="color:red" *ngIf="
+                myfbGroup.get('usermobile').invalid &&
+                myfbGroup.get('usermobile').touched ">*Req10 Digit</label>
+        </div>
+
+        <div class="row">
+            <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-envelope-fill" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                    d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z" />
+            </svg>
+            <input type="email" placeholder="EMAIL*" formControlName="email">
+            <label style="color:red" *ngIf="
+                myfbGroup.get('email').invalid &&
+                myfbGroup.get('email').touched ">*Required</label>
+        </div>
+
+        <div class="row">
+            <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-geo-fill" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                    d="M4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999zm2.493 8.574a.5.5 0 0 1-.411.575c-.712.118-1.28.295-1.655.493a1.319 1.319 0 0 0-.37.265.301.301 0 0 0-.057.09V14l.002.008a.147.147 0 0 0 .016.033.617.617 0 0 0 .145.15c.165.13.435.27.813.395.751.25 1.82.414 3.024.414s2.273-.163 3.024-.414c.378-.126.648-.265.813-.395a.619.619 0 0 0 .146-.15.148.148 0 0 0 .015-.033L12 14v-.004a.301.301 0 0 0-.057-.09 1.318 1.318 0 0 0-.37-.264c-.376-.198-.943-.375-1.655-.493a.5.5 0 1 1 .164-.986c.77.127 1.452.328 1.957.594C12.5 13 13 13.4 13 14c0 .426-.26.752-.544.977-.29.228-.68.413-1.116.558-.878.293-2.059.465-3.34.465-1.281 0-2.462-.172-3.34-.465-.436-.145-.826-.33-1.116-.558C3.26 14.752 3 14.426 3 14c0-.599.5-1 .961-1.243.505-.266 1.187-.467 1.957-.594a.5.5 0 0 1 .575.411z" />
+            </svg>
+            <input type="text" placeholder=" MOVING FROM*" formControlName="moveFrom">
+            <label style="color:red" *ngIf="
+                myfbGroup.get('moveFrom').invalid &&
+                myfbGroup.get('moveFrom').touched ">*Required</label>
+        </div>
+        <div class="row">
+            <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-geo-fill" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                    d="M4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999zm2.493 8.574a.5.5 0 0 1-.411.575c-.712.118-1.28.295-1.655.493a1.319 1.319 0 0 0-.37.265.301.301 0 0 0-.057.09V14l.002.008a.147.147 0 0 0 .016.033.617.617 0 0 0 .145.15c.165.13.435.27.813.395.751.25 1.82.414 3.024.414s2.273-.163 3.024-.414c.378-.126.648-.265.813-.395a.619.619 0 0 0 .146-.15.148.148 0 0 0 .015-.033L12 14v-.004a.301.301 0 0 0-.057-.09 1.318 1.318 0 0 0-.37-.264c-.376-.198-.943-.375-1.655-.493a.5.5 0 1 1 .164-.986c.77.127 1.452.328 1.957.594C12.5 13 13 13.4 13 14c0 .426-.26.752-.544.977-.29.228-.68.413-1.116.558-.878.293-2.059.465-3.34.465-1.281 0-2.462-.172-3.34-.465-.436-.145-.826-.33-1.116-.558C3.26 14.752 3 14.426 3 14c0-.599.5-1 .961-1.243.505-.266 1.187-.467 1.957-.594a.5.5 0 0 1 .575.411z" />
+            </svg>
+            <input type="text" placeholder=" MOVING TO*" formControlName="moveTo">
+            <label style="color:red" *ngIf="
+                myfbGroup.get('moveTo').invalid &&
+                myfbGroup.get('moveTo').touched ">*Required</label>
+        </div>
+        <div class="row">
+            <button [disabled]="!myfbGroup.valid" (click)="validation()"
+                style="width: 220px;background-color: darkcyan;">SUBMIT</button>
+        </div>
+        <div class=" field row">
+            <!-- style="color:rgb(64, 64, 250);"-->
+            *fields are Required
+        </div>
+    </div>
+
+</div>

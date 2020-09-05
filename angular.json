@@ -24,6 +24,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -119,6 +120,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "mover-packer"
+    }
+  },
+  "defaultProject": "mover-packer",
+  "cli": {
+    "analytics": "e13456c7-3591-4981-9690-6fd1e5bee6be"
+  }
 }

@@ -11,7 +11,7 @@
 }
 
 .logbox {
-    height: 86.5vh;
+    height: 86.5vh;background: rgb(243, 234, 234);
 }
 
 .start{
@@ -19,7 +19,7 @@
 }
 
 .start1{
-    font-weight: bold;font-size: 1.5em;padding: 4px;
+    font-weight: bold;font-size: 1.5em;padding: 4px; font-size: 4em;
 }
 
 .field{
